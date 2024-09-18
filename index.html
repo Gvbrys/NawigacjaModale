@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pl">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <title>Nawigacja - zadania</title>
+      <style>
+         body {
+         position: relative; 
+         }
+      </style>
+   </head>
+   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+         <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
+                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Element 1</a></li>
+                        <li><a class="dropdown-item" href="#">Element 2</a></li>
+                        <li><a class="dropdown-item" href="#">Element 3</a></li>
+                     </ul>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#">Aktwyna</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link disabled" href="#">Wyłączona</a>
+                  </li>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="container-mt-3">
+         <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+               <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+               <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+               <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="zdj1.png" alt="Księżyc" class="d-block w-100">
+               </div>
+               <div class="carousel-item">
+                  <img src="zdj2.png" alt="Mars" class="d-block w-100">
+               </div>
+               <div class="carousel-item">
+                  <img src="zdj3.png" alt="Wenus" class="d-block w-100">
+               </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+         </div>
+      </div>
+      <div class="container mt-3">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="card" style="width: 100%;">
+                  <img class="card-img-top" src="card1.png" data-bs-toggle="popover" data-bs-trigger="hover" title="Bulbasaur" data-bs-content="Typ: Roślinny/Trujący. Bulbasaur jest znany ze swojej zdolności do ewolucji w Ivysaur.">
+                  <div class="card-body">
+                     <h4 class="card-title">Bulbasaur</h4>
+                     <p class="card-text">Ziemia.</p>
+                     <a class="btn bg-success text-white">Złap!</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card" style="width: 100%;">
+                  <img class="card-img-top" src="card2.png" data-bs-toggle="popover" data-bs-trigger="hover" title="Squirtle" data-bs-content="Typ: Wodny. Squirtle potrafi przywoływać silne strumienie wody, co czyni go świetnym wyborem w bitwach.">
+                  <div class="card-body">
+                     <h4 class="card-title">Squirtle</h4>
+                     <p class="card-text">Woda.</p>
+                     <a class="btn bg-info text-white">Złap!</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card" style="width: 100%;">
+                  <img class="card-img-top" src="card3.png" data-bs-toggle="popover" data-bs-trigger="hover" title="Charizard" data-bs-content="Typ: Ognisty/Latający. Charizard to potężny Pokemon, znany z umiejętności latania i ognistych ataków.">
+                  <div class="card-body">
+                     <h4 class="card-title">Charizard</h4>
+                     <p class="card-text">Ogień.</p>
+                     <a class="btn bg-danger text-white">Złap!</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+           return new bootstrap.Popover(popoverTriggerEl)
+         })
+      </script>
+      <div class="d-flex justify-content-center mt-3">
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">Otwórz modal</button>
+      </div>
+      <div class="modal" id="authModal" tabindex="-1">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title">Formularz</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               </div>
+               <div class="modal-body">
+                  <ul class="nav nav-tabs">
+                     <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#login">Zaloguj się</button>
+                     </li>
+                     <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#register">Zarejestruj się</button>
+                     </li>
+                  </ul>
+                  <div class="tab-content mt-3">
+                     <div class="tab-pane fade show active" id="login">
+                        <input type="email" class="form-control mb-3" placeholder="Email" data-bs-toggle="tooltip" title="Wprowadź swój adres e-mail">
+                        <input type="password" class="form-control" placeholder="Hasło" data-bs-toggle="tooltip" title="Wprowadź swoje hasło">
+                     </div>
+                     <div class="tab-pane fade" id="register">
+                        <input type="email" class="form-control mb-3" placeholder="Email" data-bs-toggle="tooltip" title="Wprowadź swój adres e-mail">
+                        <input type="password" class="form-control" placeholder="Hasło" data-bs-toggle="tooltip" title="Wprowadź swoje hasło">
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Potwierdź</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+         <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Rozwiń tekst</button>
+      </div>
+      <div class="d-flex justify-content-center">
+         <div id="demo" class="collapse">
+            Oto rozwinięty tekst.
+         </div>
+      </div>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+         <button type="button" class="btn btn-primary" id="toastbtn">Pokaż powiadomienie</button>
+      </div>
+      <div class="d-flex justify-content-center mt-3">
+         <div class="toast">
+            <div class="toast-header">
+               <strong class="me-auto">Toast Header</strong>
+               <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+               <p>Przykładowy tekst w powiadomieniu (Toast).</p>
+            </div>
+         </div>
+      </div>
+      </div>
+      <script>
+         document.getElementById("toastbtn").onclick = function() {
+           var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+           var toastList = toastElList.map(function(toastEl) {
+             return new bootstrap.Toast(toastEl)
+           })
+           toastList.forEach(toast => toast.show()) 
+         }
+      </script>
+      <div class="container-mt-3">
+         <ul class="list-group">
+            <li class="list-group-item active">Element 1 (aktywny)</li>
+            <li class="list-group-item">Element 2</li>
+            <li class="list-group-item">Element 3</li>
+         </ul>
+      </div>
+      <div class="container-mt-3">
+         <div id="section1" class="container-fluid bg-info text-white" style="padding:100px 20px;">
+            <h1>Element 1</h1>
+            <p>Cras venenatis urna ut ante interdum tempor. Pellentesque interdum tortor non felis tempor, vel varius quam tempus. Vivamus non aliquam tortor. Sed vel turpis a velit lacinia tincidunt nec id turpis. Cras mi ipsum, consectetur ac nunc nec, pellentesque auctor nibh. Sed efficitur ante elit. Mauris convallis eros eget augue venenatis dapibus. </p>
+            <p>Pellentesque scelerisque neque lectus. Ut accumsan faucibus dolor, eget ultrices ligula ullamcorper et. Maecenas non enim ac enim dapibus imperdiet. Donec tempor nibh nibh, in semper massa commodo in. Proin feugiat nisi fringilla massa suscipit, in rhoncus orci lobortis. Aliquam erat volutpat!</p>
+         </div>
+      </div>
+      <div class="container-mt-3">
+         <div id="section2" class="container-fluid bg-danger text-white" style="padding:100px 20px;">
+            <h1>Element 2</h1>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus vitae commodo felis, in hendrerit nisi. Sed tristique nulla ac lorem condimentum, nec bibendum lorem eleifend. Etiam dictum eu odio vitae mollis. Praesent tristique viverra consequat. Nam vel mollis nunc. Sed sit amet justo libero. </p>
+            <p>Nunc turpis diam, ultrices eu erat eget, faucibus dapibus sapien. Vestibulum nec sodales neque. Donec congue aliquet euismod. Quisque mattis id eros id finibus. Etiam neque ante, auctor at elit tempor, pharetra ultrices felis. Nunc ut hendrerit dolor. Maecenas sagittis diam et purus dignissim, ac venenatis odio tincidunt. Curabitur vitae fermentum velit. </p>
+         </div>
+      </div>
+      <div class="container-mt-3">
+         <div id="section3" class="container-fluid bg-warning" style="padding:100px 20px;">
+            <h1>Element 3</h1>
+            <p>Etiam erat mauris, mattis congue nisl eu, ultrices pellentesque eros. Fusce mollis venenatis est id tincidunt. Fusce malesuada consectetur ullamcorper. Etiam at magna risus. Proin lobortis metus vitae magna suscipit placerat. Nam facilisis lacus eu tellus mollis, non rutrum lacus tempus. Mauris eu ullamcorper dui, vitae maximus purus.</p>
+            <p>Praesent tempus ligula justo. Morbi id lacus eu velit dictum faucibus. Quisque porttitor hendrerit posuere. Etiam massa neque, congue fringilla condimentum nec, viverra sit amet sem. Nulla rhoncus, justo eu tristique porttitor, felis sapien placerat metus, in tristique leo erat sed nulla. Mauris id tellus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec congue mauris eget ligula placerat, et aliquet magna eleifend. Proin lacus urna, vehicula sed neque nec, viverra mollis lectus.</p>
+         </div>
+      </div>
+   </body>
+</html>
